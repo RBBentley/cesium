@@ -1802,6 +1802,7 @@ define([
         }
         // This is not needed after the program is processed, free the memory
         model._programPrimitives[programName] = undefined;
+        console.log(shader);
         return shader;
     }
 
@@ -2540,7 +2541,7 @@ define([
         },
         MODELINVERSETRANSPOSE : function(uniformState, model) {
             return function() {
-                return uniformState.inverseTranposeModel;
+                return uniformState.inverseTransposeModel;
             };
         },
         MODELVIEWINVERSETRANSPOSE : function(uniformState, model) {
